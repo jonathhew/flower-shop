@@ -37,7 +37,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -68,7 +68,7 @@ nav a:hover {
     background-color: #92254f;
 }
 
-/* PRODUCTS SECTION */
+/* PRODUCTS */
 .products {
     padding: 60px 40px;
     text-align: center;
@@ -79,19 +79,25 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-/* PRODUCT GRID */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
 }
 
-/* PRODUCT CARD */
 .product-card {
     background-color: white;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .product-card h3 {
@@ -111,16 +117,32 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+/* CONTACT */
+.contact {
+    background-color: #fff0f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
 /* FOOTER */
 footer {
     background-color: #b03060;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 60px;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
