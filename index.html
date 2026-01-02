@@ -103,7 +103,7 @@
                     <p><a href="mailto:nala.co@gmail.com" style="text-decoration:none; color:inherit;">nala.co@gmail.com</a></p>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.53587002011!2d101.4426569758832!3d3.111667053538804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc530058e72791%3A0xe542617f6943b17c!2sSetia%20Alam%2C%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.824732644265!2d101.4429!3d3.1147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMDYnNTIuOSJOIDEwMcKwMjYnMzQuNCJF!5e0!3m2!1sen!2smy!4v1700000000000" 
                     width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
@@ -129,6 +129,8 @@
     <p>© 2026 NaLa.co. All rights reserved.</p>
 </footer>
 
+<button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
+
 <a href="https://wa.me/60162016783" class="whatsapp-float" target="_blank">
     <img src="images/whatsapp.png" alt="WhatsApp">
 </a>
@@ -148,6 +150,20 @@
     window.onclick = (event) => {
         if (event.target == document.getElementById('mapSelector')) closeMapSelector();
     };
+
+    // Back to Top Logic
+    window.onscroll = function() { scrollFunction() };
+    function scrollFunction() {
+        const btn = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    }
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
 </script>
 
 </body>
