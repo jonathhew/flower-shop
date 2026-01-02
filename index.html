@@ -15,7 +15,6 @@
 
 <header>
     <div class="logo">🌸 NaLa.co</div>
-    
     <nav id="nav-menu">
         <a href="#">Home</a>
         <a href="#products">Best Sellers</a>
@@ -34,9 +33,7 @@
     <div class="hero-content">
         <h2>Elegant Floral Decorations <br> for Events & Weddings</h2>
         <p>Premium soap and artificial flower arrangements, crafted with care to make your moments unforgettable.</p>
-        <a href="https://wa.me/60162016783" class="btn btn-primary" target="_blank">
-            WhatsApp for Enquiry
-        </a>
+        <a href="https://wa.me/60162016783" class="btn btn-primary" target="_blank">WhatsApp for Enquiry</a>
     </div>
 </section>
 
@@ -51,10 +48,7 @@
                 <div class="card-content">
                     <h3>Garland Arch Flower</h3>
                     <p>A stunning floral arch decoration perfect for weddings, engagements, and event entrances.</p>
-                    <a href="https://wa.me/60162016783?text=Hi%20NaLa.co,%20I%20am%20interested%20in%20Garland%20Arch%20Flower" 
-                       class="btn btn-outline" target="_blank">
-                       Get Quotation
-                    </a>
+                    <a href="https://wa.me/60162016783?text=Hi%20NaLa.co,%20I%20am%20interested%20in%20Garland%20Arch%20Flower" class="btn btn-outline" target="_blank">Get Quotation</a>
                 </div>
             </div>
         </div>
@@ -66,9 +60,7 @@
         <h2 class="section-title">Our Collections</h2>
         <div class="product-grid">
             <div class="product-card">
-                <div class="img-container">
-                    <img src="images/soap-flower.jpg" alt="Soap Flower">
-                </div>
+                <div class="img-container"><img src="images/soap-flower.jpg" alt="Soap Flower"></div>
                 <div class="card-content">
                     <h3>Soap Flowers</h3>
                     <p>Long-lasting decorative soap flowers, perfect as gifts or keepsakes.</p>
@@ -76,9 +68,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <div class="img-container">
-                    <img src="images/artificial-flower.jpg" alt="Artificial Flower">
-                </div>
+                <div class="img-container"><img src="images/artificial-flower.jpg" alt="Artificial Flower"></div>
                 <div class="card-content">
                     <h3>Artificial Flowers</h3>
                     <p>Elegant artificial floral decorations including walkways and table settings.</p>
@@ -95,10 +85,14 @@
         <div class="contact-wrapper">
             <div class="contact-info">
                 <div class="contact-item">
-                    <h3>📍 Address</h3>
-                    <p>66, Jalan Setia Permai U13/42K,<br> 
-                    Setia Alam, 40170 Shah Alam, <br>
-                    Selangor, Malaysia</p>
+                    <h3>📍 Address (Click to Navigate)</h3>
+                    <p>
+                        <a href="javascript:void(0)" onclick="openMapSelector()" style="text-decoration: none; color: inherit; cursor: pointer;">
+                            66, Jalan Setia Permai U13/42K,<br> 
+                            Setia Alam, 40170 Shah Alam, <br>
+                            Selangor, Malaysia
+                        </a>
+                    </p>
                 </div>
                 <div class="contact-item">
                     <h3>📞 Phone / WhatsApp</h3>
@@ -109,43 +103,51 @@
                     <p><a href="mailto:nala.co@gmail.com" style="text-decoration:none; color:inherit;">nala.co@gmail.com</a></p>
                 </div>
                 <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.848834418652!2d101.4421272!3d3.1345422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc530000000001%3A0x0!2zM8KwMDgnMDQuNCJOIDEwMcKwMjYnMzEuNyJF!5e0!3m2!1sen!2smy!4v1700000000000" 
-                        width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy">
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.53587002011!2d101.4426569758832!3d3.111667053538804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc530058e72791%3A0xe542617f6943b17c!2sSetia%20Alam%2C%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy" 
+                    width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             <div class="contact-cta">
-                <p>Planning a wedding or a special surprise? Let's discuss your floral vision.</p>
+                <p>Planning a wedding? Let's discuss your floral vision.</p>
                 <a href="https://wa.me/60162016783" class="btn btn-primary" target="_blank">Chat with us now</a>
             </div>
         </div>
     </div>
 </section>
 
+<div id="mapSelector" class="map-modal">
+    <div class="map-modal-content">
+        <h3>Open Navigation in...</h3>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" target="_blank" class="map-btn gmaps">Google Maps</a>
+        <a href="https://waze.com/ul?q=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor&navigate=yes" target="_blank" class="map-btn waze">Waze</a>
+        <a href="maps://maps.apple.com/?daddr=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" class="map-btn apple">Apple Maps</a>
+        <button onclick="closeMapSelector()" class="close-btn">Cancel</button>
+    </div>
+</div>
+
 <footer>
     <p>© 2026 NaLa.co. All rights reserved.</p>
 </footer>
 
-<a href="https://wa.me/60162016783" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/60162016783" class="whatsapp-float" target="_blank">
     <img src="images/whatsapp.png" alt="WhatsApp">
 </a>
 
 <script>
+    // Hamburger Menu Logic
     const menu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
-
-    menu.addEventListener('click', () => {
+    menu.onclick = () => {
         menu.classList.toggle('active');
         navMenu.classList.toggle('active');
-    });
+    };
 
-    document.querySelectorAll('#nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
+    // Map Selector Logic
+    function openMapSelector() { document.getElementById('mapSelector').style.display = 'block'; }
+    function closeMapSelector() { document.getElementById('mapSelector').style.display = 'none'; }
+    window.onclick = (event) => {
+        if (event.target == document.getElementById('mapSelector')) closeMapSelector();
+    };
 </script>
 
 </body>
