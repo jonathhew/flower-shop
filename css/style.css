@@ -1,5 +1,5 @@
 /* ======================
-    VARIABLES & RESET
+   VARIABLES & RESET
 ====================== */
 :root {
     --primary-color: #b03060;
@@ -27,7 +27,7 @@ body {
 }
 
 /* ======================
-    UTILITIES
+   UTILITIES
 ====================== */
 .container {
     max-width: 1200px;
@@ -52,7 +52,7 @@ body {
 }
 
 /* ======================
-    HEADER
+   HEADER
 ====================== */
 header {
     background-color: var(--bg-white);
@@ -99,25 +99,8 @@ header nav a:hover {
     background-color: var(--primary-dark);
 }
 
-/* HAMBURGER BUTTON STYLING */
-.menu-toggle {
-    display: none; /* Hidden on desktop */
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-color);
-    margin: 3px 0;
-    transition: 0.4s;
-    border-radius: 2px;
-}
-
 /* ======================
-    HERO SECTION
+   HERO SECTION
 ====================== */
 .hero {
     text-align: center;
@@ -143,7 +126,7 @@ header nav a:hover {
 }
 
 /* ======================
-    BUTTONS
+   BUTTONS
 ====================== */
 .btn {
     display: inline-block;
@@ -170,8 +153,8 @@ header nav a:hover {
     background-color: transparent;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    display: block;
-    width: 100%;
+    display: block;      /* Makes buttons fill width */
+    width: 100%;        /* Keeps buttons same size */
     text-align: center;
 }
 
@@ -181,7 +164,7 @@ header nav a:hover {
 }
 
 /* ======================
-    PRODUCT GRID & CARDS
+   PRODUCT GRID & CARDS
 ====================== */
 .product-grid {
     display: grid;
@@ -209,7 +192,7 @@ header nav a:hover {
     height: 250px;
     width: 100%;
     overflow: hidden;
-    background-color: #eee;
+    background-color: #eee; /* Shows grey while loading */
 }
 
 .product-card img {
@@ -245,7 +228,7 @@ header nav a:hover {
 }
 
 /* ======================
-    CONTACT SECTION
+   CONTACT SECTION
 ====================== */
 .contact-section {
     padding: 80px 0;
@@ -301,7 +284,7 @@ header nav a:hover {
 }
 
 /* ======================
-    FOOTER & WHATSAPP
+   FOOTER & WHATSAPP
 ====================== */
 footer {
     background-color: var(--primary-color);
@@ -327,53 +310,35 @@ footer {
     text-decoration: none;
 }
 
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
 .whatsapp-float img {
     width: 35px;
     height: 35px;
 }
 
 /* ======================
-    MOBILE RESPONSIVE
+   MOBILE RESPONSIVE
 ====================== */
-@media (max-width: 850px) {
+@media (max-width: 768px) {
     header {
-        padding: 15px 25px;
-        flex-direction: row; /* Keep logo and burger on one line */
-    }
-
-    .menu-toggle {
-        display: flex; /* Show in your circled area */
-    }
-
-    header nav {
-        display: none; /* Hidden until toggle */
-        position: absolute;
-        top: 75px;
-        right: 25px;
-        background-color: var(--bg-white);
         flex-direction: column;
-        width: 220px;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: var(--shadow);
-        text-align: center;
-        margin-top: 0;
-        gap: 0;
+        padding: 15px;
     }
-
-    header nav.active {
+    
+    header nav {
+        margin-top: 15px;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
-
+    
     header nav a {
-        margin: 12px 0 !important;
-        font-size: 16px;
+        margin: 0;
     }
-
-    /* Animation: Turn bars into X */
-    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
-    .menu-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
     .hero h2 {
         font-size: 32px;
