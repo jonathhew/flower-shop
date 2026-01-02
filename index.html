@@ -55,30 +55,6 @@
     </div>
 </section>
 
-<section class="section-padding bg-light" id="categories">
-    <div class="container">
-        <h2 class="section-title">Our Collections</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="img-container"><img src="images/soap-flower.jpg" alt="Soap Flower"></div>
-                <div class="card-content">
-                    <h3>Soap Flowers</h3>
-                    <p>Long-lasting decorative soap flowers, perfect as gifts or keepsakes.</p>
-                    <a href="soap-flowers.html" class="btn btn-outline">View Collection</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="img-container"><img src="images/artificial-flower.jpg" alt="Artificial Flower"></div>
-                <div class="card-content">
-                    <h3>Artificial Flowers</h3>
-                    <p>Elegant artificial floral decorations including walkways and table settings.</p>
-                    <a href="artificial-flowers.html" class="btn btn-outline">View Collection</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="contact-section" id="contact">
     <div class="container">
         <h2 class="section-title">Get In Touch</h2>
@@ -102,14 +78,10 @@
                     <h3>✉️ Email</h3>
                     <p><a href="mailto:nala.co@gmail.com" style="text-decoration:none; color:inherit;">nala.co@gmail.com</a></p>
                 </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0532247184285!2d101.4429789!3d3.1070335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc530018a3861f%3A0xc6c39a3f2955f303!2s66%2C%20Jalan%20Setia%20Permai%20U13%2F42k%2C%20Setia%20Alam%2C%2040170%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1700000000000" 
-                    width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
             </div>
-            <div class="contact-cta">
-                <p>Planning a wedding? Let's discuss your floral vision.</p>
-                <a href="https://wa.me/60162016783" class="btn btn-primary" target="_blank">Chat with us now</a>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.847525287711!2d101.4491!3d3.1118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc532057635661%3A0x679468532098668!2s66%2C%20Jalan%20Setia%20Permai%20U13%2F42k%2C%20Setia%20Alam%2C%2040170%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1700000000000" 
+                width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
@@ -117,10 +89,12 @@
 
 <div id="mapSelector" class="map-modal">
     <div class="map-modal-content">
-        <p style="color: #666; margin-bottom: 10px; font-weight: bold; font-family: sans-serif;">Directions</p>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" target="_blank" class="map-btn">Google Maps</a>
-        <a href="https://waze.com/ul?q=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor&navigate=yes" target="_blank" class="map-btn">Waze</a>
-        <a href="maps://maps.apple.com/?daddr=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" class="map-btn">Apple Maps</a>
+        <div class="modal-header">Directions</div>
+        <div class="button-group">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" target="_blank" class="map-btn">Google Maps</a>
+            <a href="https://waze.com/ul?q=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor&navigate=yes" target="_blank" class="map-btn">Waze</a>
+            <a href="maps://maps.apple.com/?daddr=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" class="map-btn last">Apple Maps</a>
+        </div>
         <button onclick="closeMapSelector()" class="close-btn">Cancel</button>
     </div>
 </div>
@@ -132,7 +106,7 @@
 <button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
 
 <a href="https://wa.me/60162016783" class="whatsapp-float" target="_blank">
-    <img src="images/whatsapp.png" alt="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 <script>
@@ -143,26 +117,29 @@
         navMenu.classList.toggle('active');
     };
 
-    function openMapSelector() { document.getElementById('mapSelector').style.display = 'block'; }
-    function closeMapSelector() { document.getElementById('mapSelector').style.display = 'none'; }
+    function openMapSelector() { 
+        document.getElementById('mapSelector').style.display = 'flex'; 
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+    }
     
-    // Close when clicking background
+    function closeMapSelector() { 
+        document.getElementById('mapSelector').style.display = 'none'; 
+        document.body.style.overflow = 'auto'; 
+    }
+    
     window.onclick = (event) => {
         if (event.target == document.getElementById('mapSelector')) closeMapSelector();
     };
 
-    window.onscroll = function() { scrollFunction() };
-    function scrollFunction() {
+    window.onscroll = function() {
         const btn = document.getElementById("backToTop");
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             btn.style.display = "block";
         } else {
             btn.style.display = "none";
         }
-    }
-    function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
+    };
+    function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
 </script>
 
 </body>
