@@ -1,5 +1,5 @@
 /* ======================
-   VARIABLES & RESET
+    VARIABLES & RESET
 ====================== */
 :root {
     --primary-color: #b03060;
@@ -27,7 +27,7 @@ body {
 }
 
 /* ======================
-   UTILITIES
+    UTILITIES
 ====================== */
 .container {
     max-width: 1200px;
@@ -52,7 +52,7 @@ body {
 }
 
 /* ======================
-   HEADER
+    HEADER
 ====================== */
 header {
     background-color: var(--bg-white);
@@ -82,10 +82,27 @@ header nav a {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s;
+    position: relative; /* For the hover line */
 }
 
 header nav a:hover {
     color: var(--primary-color);
+}
+
+/* Underline Animation */
+header nav a:not(.nav-cta)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s;
+}
+
+header nav a:hover::after {
+    width: 100%;
 }
 
 .nav-cta {
@@ -97,15 +114,21 @@ header nav a:hover {
 
 .nav-cta:hover {
     background-color: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 /* ======================
-   HERO SECTION
+    HERO SECTION
 ====================== */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background-color: var(--bg-light);
+    padding: 140px 20px;
+    /* Hero with a soft overlay for text readability */
+    background: linear-gradient(rgba(255, 247, 249, 0.85), rgba(255, 247, 249, 0.85)), 
+                url('../images/hero-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
 }
 
 .hero h2 {
@@ -126,7 +149,7 @@ header nav a:hover {
 }
 
 /* ======================
-   BUTTONS
+    BUTTONS
 ====================== */
 .btn {
     display: inline-block;
@@ -153,8 +176,8 @@ header nav a:hover {
     background-color: transparent;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    display: block;      /* Makes buttons fill width */
-    width: 100%;        /* Keeps buttons same size */
+    display: block;
+    width: 100%;
     text-align: center;
 }
 
@@ -164,7 +187,7 @@ header nav a:hover {
 }
 
 /* ======================
-   PRODUCT GRID & CARDS
+    PRODUCT GRID & CARDS
 ====================== */
 .product-grid {
     display: grid;
@@ -189,10 +212,10 @@ header nav a:hover {
 }
 
 .img-container {
-    height: 250px;
+    height: 300px; /* Increased height */
     width: 100%;
     overflow: hidden;
-    background-color: #eee; /* Shows grey while loading */
+    background-color: #eee;
 }
 
 .product-card img {
@@ -228,7 +251,7 @@ header nav a:hover {
 }
 
 /* ======================
-   CONTACT SECTION
+    CONTACT SECTION
 ====================== */
 .contact-section {
     padding: 80px 0;
@@ -284,13 +307,13 @@ header nav a:hover {
 }
 
 /* ======================
-   FOOTER & WHATSAPP
+    FOOTER & WHATSAPP
 ====================== */
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
 }
 
 .whatsapp-float {
@@ -307,7 +330,6 @@ footer {
     justify-content: center;
     z-index: 999;
     transition: transform 0.3s;
-    text-decoration: none;
 }
 
 .whatsapp-float:hover {
@@ -320,7 +342,7 @@ footer {
 }
 
 /* ======================
-   MOBILE RESPONSIVE
+    MOBILE RESPONSIVE
 ====================== */
 @media (max-width: 768px) {
     header {
