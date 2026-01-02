@@ -14,13 +14,20 @@
 <body>
 
 <header>
-    <a href="index.html" class="logo" style="text-decoration: none;">🌸 NaLa.co</a>
-    <nav>
-        <a href="index.html">Home</a>
+    <div class="logo">🌸 NaLa.co</div>
+    
+    <nav id="nav-menu">
+        <a href="#">Home</a>
         <a href="#products">Best Sellers</a>
-        <a href="#categories">Collections</a>
+        <a href="#categories">Categories</a>
         <a href="https://wa.me/60162016783" class="nav-cta" target="_blank">Contact Us</a>
     </nav>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
 </header>
 
 <section class="hero">
@@ -36,7 +43,6 @@
 <section class="section-padding" id="products">
     <div class="container">
         <h2 class="section-title">⭐ Best Selling Decoration</h2>
-
         <div class="product-grid">
             <div class="product-card">
                 <div class="img-container">
@@ -58,7 +64,6 @@
 <section class="section-padding bg-light" id="categories">
     <div class="container">
         <h2 class="section-title">Our Collections</h2>
-
         <div class="product-grid">
             <div class="product-card">
                 <div class="img-container">
@@ -70,7 +75,6 @@
                     <a href="soap-flowers.html" class="btn btn-outline">View Collection</a>
                 </div>
             </div>
-
             <div class="product-card">
                 <div class="img-container">
                     <img src="images/artificial-flower.jpg" alt="Artificial Flower">
@@ -89,7 +93,6 @@
     <div class="container">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-wrapper">
-            
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>📍 Address</h3>
@@ -97,30 +100,25 @@
                     Setia Alam, 40170 Shah Alam, <br>
                     Selangor, Malaysia</p>
                 </div>
-                
                 <div class="contact-item">
                     <h3>📞 Phone / WhatsApp</h3>
                     <p><a href="tel:+60162016783" style="text-decoration:none; color:inherit;">+60 16-201 6783</a></p>
                 </div>
-                
                 <div class="contact-item">
                     <h3>✉️ Email</h3>
                     <p><a href="mailto:nala.co@gmail.com" style="text-decoration:none; color:inherit;">nala.co@gmail.com</a></p>
                 </div>
-
                 <div class="map-container">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15935.543475143324!2d101.4423859!3d3.1118683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc530881954449%3A0xc3f1406e2c81577!2sSetia%20Alam%2C%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1700000000000" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.848834418652!2d101.4421272!3d3.1345422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc530000000001%3A0x0!2zM8KwMDgnMDQuNCJOIDEwMcKwMjYnMzEuNyJF!5e0!3m2!1sen!2smy!4v1700000000000" 
                         width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
-
             <div class="contact-cta">
                 <p>Planning a wedding or a special surprise? Let's discuss your floral vision.</p>
                 <a href="https://wa.me/60162016783" class="btn btn-primary" target="_blank">Chat with us now</a>
             </div>
-
         </div>
     </div>
 </section>
@@ -130,8 +128,25 @@
 </footer>
 
 <a href="https://wa.me/60162016783" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp Support">
+    <img src="images/whatsapp.png" alt="WhatsApp">
 </a>
+
+<script>
+    const menu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    menu.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
 
 </body>
 </html>
