@@ -103,7 +103,7 @@
                     <p><a href="mailto:nala.co@gmail.com" style="text-decoration:none; color:inherit;">nala.co@gmail.com</a></p>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.824732644265!2d101.4429!3d3.1147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMDYnNTIuOSJOIDEwMcKwMjYnMzQuNCJF!5e0!3m2!1sen!2smy!4v1700000000000" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0532247184285!2d101.4429789!3d3.1070335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc530018a3861f%3A0xc6c39a3f2955f303!2s66%2C%20Jalan%20Setia%20Permai%20U13%2F42k%2C%20Setia%20Alam%2C%2040170%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1700000000000" 
                     width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
@@ -117,10 +117,10 @@
 
 <div id="mapSelector" class="map-modal">
     <div class="map-modal-content">
-        <h3>Open Navigation in...</h3>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" target="_blank" class="map-btn gmaps">Google Maps</a>
-        <a href="https://waze.com/ul?q=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor&navigate=yes" target="_blank" class="map-btn waze">Waze</a>
-        <a href="maps://maps.apple.com/?daddr=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" class="map-btn apple">Apple Maps</a>
+        <p style="color: #666; margin-bottom: 10px; font-weight: bold; font-family: sans-serif;">Directions</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" target="_blank" class="map-btn">Google Maps</a>
+        <a href="https://waze.com/ul?q=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor&navigate=yes" target="_blank" class="map-btn">Waze</a>
+        <a href="maps://maps.apple.com/?daddr=66,Jalan+Setia+Permai+U13/42K,Setia+Alam,40170+Shah+Alam,Selangor" class="map-btn">Apple Maps</a>
         <button onclick="closeMapSelector()" class="close-btn">Cancel</button>
     </div>
 </div>
@@ -136,7 +136,6 @@
 </a>
 
 <script>
-    // Hamburger Menu Logic
     const menu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
     menu.onclick = () => {
@@ -144,14 +143,14 @@
         navMenu.classList.toggle('active');
     };
 
-    // Map Selector Logic
     function openMapSelector() { document.getElementById('mapSelector').style.display = 'block'; }
     function closeMapSelector() { document.getElementById('mapSelector').style.display = 'none'; }
+    
+    // Close when clicking background
     window.onclick = (event) => {
         if (event.target == document.getElementById('mapSelector')) closeMapSelector();
     };
 
-    // Back to Top Logic
     window.onscroll = function() { scrollFunction() };
     function scrollFunction() {
         const btn = document.getElementById("backToTop");
