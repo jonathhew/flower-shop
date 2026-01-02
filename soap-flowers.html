@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <title>Soap Flower Collection | NaLa.co</title>
@@ -14,11 +14,21 @@
 <body>
 
 <header>
-    <div class="logo">🌸 NaLa.co</div>
-    <nav>
-        <a href="index.html">← Back to Home</a>
+    <a href="index.html" class="logo-link">
+        <div class="logo">🌸 NaLa.co</div>
+    </a>
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Best Sellers</a>
+        <a href="index.html#categories">Categories</a>
         <a href="https://wa.me/60162016783" class="nav-cta" target="_blank">Enquire Now</a>
     </nav>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
 </header>
 
 <section class="section-padding">
@@ -36,10 +46,8 @@
                 <div class="card-content">
                     <h3>Classic Rose Bouquet</h3>
                     <p>Beautifully scented pink roses made from premium soap.</p>
-                    <a href="https://wa.me/60162016783?text=Hi, I am interested in the Classic Rose Bouquet" 
-                       class="btn btn-outline" target="_blank">
-                       WhatsApp to Order
-                    </a>
+                    <a href="https://wa.me/60162016783?text=Hi%20NaLa.co,%20I%20am%20interested%20in%20the%20Classic%20Rose%20Bouquet" 
+                       class="btn btn-outline" target="_blank">WhatsApp to Order</a>
                 </div>
             </div>
 
@@ -50,10 +58,8 @@
                 <div class="card-content">
                     <h3>Eternal Flower Box</h3>
                     <p>A luxury box arrangement of mixed soap flowers.</p>
-                    <a href="https://wa.me/60162016783?text=Hi, I am interested in the Eternal Flower Box" 
-                       class="btn btn-outline" target="_blank">
-                       WhatsApp to Order
-                    </a>
+                    <a href="https://wa.me/60162016783?text=Hi%20NaLa.co,%20I%20am%20interested%20in%20the%20Eternal%20Flower%20Box" 
+                       class="btn btn-outline" target="_blank">WhatsApp to Order</a>
                 </div>
             </div>
         </div>
@@ -61,8 +67,32 @@
 </section>
 
 <footer>
-    <p>&copy; 2026 NaLa.co. All rights reserved.</p>
+    <p>© 2026 NaLa.co. All rights reserved.</p>
 </footer>
+
+<button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
+<a href="https://wa.me/60162016783" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script>
+    const menu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    menu.onclick = () => {
+        menu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    };
+
+    window.onscroll = function() {
+        const btn = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+    function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
+</script>
 
 </body>
 </html>
